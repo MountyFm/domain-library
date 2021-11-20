@@ -11,7 +11,6 @@ import org.joda.time.DateTime
  * @param isPrivate   param showing whether Room is private or not.
  * @param imageUrl    url of the avatar image of the Room.
  * @param inviteCode  the invitation code of the Room.
- * @param bannedUsers the sequence of RoomUser ids who cannot be added to the group until they are removed from this list.
  * @param createdAt   date and time when the Room was created.
  */
 
@@ -22,5 +21,4 @@ case class Room(id: String,
                 isPrivate: Boolean,
                 imageUrl: String,
                 inviteCode: String,
-                bannedUsers: Seq[String],
                 createdAt: DateTime) extends DomainEntity
