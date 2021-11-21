@@ -17,4 +17,5 @@ case class Message(id: String,
                    profileId: String,
                    userName: String,
                    userAvatarUrl: Option[String] = None,
+                   messageText: String,
                    createdAt: DateTime) extends DomainEntity

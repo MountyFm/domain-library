@@ -9,6 +9,7 @@ sealed trait RoomUserType
  * ADMIN        - administrator of the Room. Can create other admins, add/remove/ban users, promote user to be DJ, demote a DJ to ordinary user etc.
  * DJ           - user who can play songs in the Room.
  * ORDINARY     - ordinary user who can just chat and listen to the songs played by DJ.
+ * BANNED       - user is banned from the room
  */
 
 object RoomUserType extends CustomEnumeration[RoomUserType] {

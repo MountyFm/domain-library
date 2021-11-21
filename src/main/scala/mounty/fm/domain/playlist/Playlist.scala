@@ -15,8 +15,8 @@ import org.joda.time.DateTime
 
 case class Playlist(id: String,
                     name: String,
-                    genres: Seq[String],
-                    picUrl: String,
+                    genreIds: Seq[String],
+                    picUrl: Option[String],
                     creatorProfileId: String,
                     isPrivate: Boolean,
                     createdAt: DateTime) extends DomainEntity
