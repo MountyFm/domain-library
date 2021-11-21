@@ -1,6 +1,6 @@
-package mounty.fm.domain.chat
+package kz.mounty.fm.domain.chat
 
-import mounty.fm.domain.DomainEntity
+import kz.mounty.fm.domain.DomainEntity
 import org.joda.time.DateTime
 
 /**

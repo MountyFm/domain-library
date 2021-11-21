@@ -1,6 +1,6 @@
-package mounty.fm.domain.track
+package kz.mounty.fm.domain.track
 
-import mounty.fm.domain.DomainEntity
+import kz.mounty.fm.domain.DomainEntity
 
 /**
  * @param id          unique id of the RoomTrack.

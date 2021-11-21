@@ -1,4 +1,4 @@
-package mounty.fm.domain
+package kz.mounty.fm.domain
 
 trait CustomEnumeration[T] {
 

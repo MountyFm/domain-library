@@ -1,6 +1,6 @@
-package mounty.fm.domain.room
+package kz.mounty.fm.domain.room
 
-import mounty.fm.domain.CustomEnumeration
+import kz.mounty.fm.domain.CustomEnumeration
 
 sealed trait RoomStatus
 

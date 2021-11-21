@@ -1,6 +1,6 @@
-package mounty.fm.domain.user
+package kz.mounty.fm.domain.user
 
-import mounty.fm.domain.CustomEnumeration
+import kz.mounty.fm.domain.CustomEnumeration
 
 sealed trait RoomUserType
 

@@ -1,6 +1,6 @@
-package mounty.fm.domain.user
+package kz.mounty.fm.domain.user
 
-import mounty.fm.domain.DomainEntity
+import kz.mounty.fm.domain.DomainEntity
 
 /**
  * RoomUser - connecting element between user and room.

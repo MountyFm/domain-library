@@ -1,6 +1,6 @@
-package mounty.fm.domain.playlist
+package kz.mounty.fm.domain.playlist
 
-import mounty.fm.domain.DomainEntity
+import kz.mounty.fm.domain.DomainEntity
 import org.joda.time.DateTime
 
 /**
