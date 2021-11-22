@@ -12,7 +12,7 @@ import org.joda.time.DateTime
  * @param messageText   text of message
  * @param createdAt     date and time when the message instance was created.
  */
-
+//test
 case class Message(id: String,
                    roomId: String,
                    profileId: String,
