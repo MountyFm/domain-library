@@ -9,6 +9,7 @@ import org.joda.time.DateTime
  * @param profileId     user profile id.
  * @param userName      user profile name.
  * @param userAvatarUrl user profile avatar url(optional).
+ * @param messageText   text of message
  * @param createdAt     date and time when the message instance was created.
  */
 
