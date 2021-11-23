@@ -31,5 +31,6 @@ publishTo := {
 
 
 libraryDependencies ++= Seq(
-  "joda-time"  % "joda-time"  % "2.8.2"
+  "joda-time"  % "joda-time"  % "2.8.2",
+  "org.json4s" %% "json4s-jackson" % "4.0.3"
 )
