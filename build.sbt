@@ -31,5 +31,5 @@ publishTo := {
 
 
 libraryDependencies ++= Seq(
-  "joda-time"  % "joda-time"  % "2.10.13",
+  "joda-time"  % "joda-time"  % "2.10.13"
 )
