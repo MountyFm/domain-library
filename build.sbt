@@ -33,5 +33,10 @@ publishTo := {
 libraryDependencies ++= Seq(
   "joda-time"  % "joda-time"  % "2.10.13",
   "org.json4s" %% "json4s-jackson" % "4.0.3",
-  "org.json4s" %% "json4s-native" % "4.0.3"
+  "org.json4s" %% "json4s-native" % "4.0.3",
+  //amqp
+  "com.rabbitmq" % "amqp-client" % "5.14.0",
+
+  //akka
+  "com.typesafe.akka" %% "akka-actor" % "2.6.17"
 )
