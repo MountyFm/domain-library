@@ -40,6 +40,11 @@ object HttpStatusCodes {
 
 }
 
+case class ExceptionInfo(status: Option[Int],
+                         series: Option[Int],
+                         code: Option[String],
+                         message: Option[String])
+
 trait MountyException extends RuntimeException with Serializable {
 
   def status: HttpStatusCode
@@ -48,6 +53,16 @@ trait MountyException extends RuntimeException with Serializable {
 
   def message: Option[String]
 
+  def getExceptionInfo: ExceptionInfo = {
+    ExceptionInfo(
+      status = Some(status.code),
+      series = Some(errorCode.series.series),
+      code = Some(getFullExceptionCode),
+      message = message
+    )
+  }
+
+  def getFullExceptionCode: String = ((status.code * 100 + errorCode.series.series) * 1000 + errorCode.code).toString
 }
 
 case class BadRequestException(override val errorCode: ErrorCode,
