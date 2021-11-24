@@ -1,6 +1,6 @@
 package kz.mounty.fm.amqp
 
-import com.rabbitmq.client.AMQP.Queue
+import com.rabbitmq.client.AMQP.{Exchange, Queue}
 import com.rabbitmq.client.{Channel, Connection, ConnectionFactory}
 
 import scala.util.{Failure, Success, Try}
@@ -20,6 +20,20 @@ object RabbitMQConnection {
     factory.setPort(port)
 
     factory.newConnection()
+  }
+
+  def declareExchange(channel: Channel,
+                      exchangeName: String,
+                      `type`: String): Try[Exchange.DeclareOk] = {
+    Try(
+      channel.exchangeDeclare(
+        exchangeName,
+        `type`,
+        true,
+        false,
+        new java.util.HashMap[String, AnyRef]
+      )
+    )
   }
 
   def declareAndBindQueue(channel: Channel,
