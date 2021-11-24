@@ -6,7 +6,7 @@ import org.joda.time.DateTime
 /**
  * @param id               unique id of the Playlist.
  * @param name             name of the Playlist.
- * @param genres           genre of the songs in the playlist.
+ * @param genreIds           genre of the songs in the playlist.
  * @param picUrl           playlist main picture url.
  * @param creatorProfileId user profile id of the creator.
  * @param isPrivate        parameter showing whether playlist is private or not.
