@@ -33,7 +33,7 @@ trait BaseRepository {
       .head()
 
 
-  def updateOneByFilter[T: Manifest](filter: Bson, update: Bson)(implicit collection: MongoCollection[T], ex: ExecutionContext): Future[Long] =
+  def updateOneByFilter[T: Manifest](filter: Bson, update: Seq[Bson])(implicit collection: MongoCollection[T], ex: ExecutionContext): Future[Long] =
     collection
       .updateOne(filter, update)
       .head()

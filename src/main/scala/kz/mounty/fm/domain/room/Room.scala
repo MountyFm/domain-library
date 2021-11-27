@@ -11,6 +11,7 @@ import org.joda.time.DateTime
  * @param isPrivate  param showing whether Room is private or not.
  * @param imageUrl   url of the avatar image of the Room.
  * @param inviteCode the invitation code of the Room.
+ * @param spotifyUri spotify uri for a playlist
  * @param createdAt  date and time when the Room was created.
  */
 
@@ -21,4 +22,5 @@ case class Room(id: String,
                 isPrivate: Boolean,
                 imageUrl: String,
                 inviteCode: String,
+                spotifyUri: String,
                 createdAt: DateTime) extends DomainEntity
