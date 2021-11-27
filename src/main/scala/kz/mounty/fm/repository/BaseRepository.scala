@@ -33,15 +33,15 @@ trait BaseRepository {
       .head()
 
 
-  def updateOneByFilter[T: Manifest](filter: Bson, update: Seq[Bson])(implicit collection: MongoCollection[T], ex: ExecutionContext): Future[Long] =
+  def updateOneByFilter[T: Manifest](filter: Bson, update: Seq[Bson])(implicit collection: MongoCollection[T], ex: ExecutionContext): Future[Boolean] =
     collection
       .updateOne(filter, update)
       .head()
-      .map(res => res.getModifiedCount)
+      .map(res => res.wasAcknowledged())
 
-  def deleteOneByFilter[T: Manifest](filter: Bson)(implicit collection: MongoCollection[T], ex: ExecutionContext): Future[Long] =
+  def deleteOneByFilter[T: Manifest](filter: Bson)(implicit collection: MongoCollection[T], ex: ExecutionContext): Future[Boolean] =
     collection
       .deleteOne(filter)
       .head()
-      .map(res => res.getDeletedCount)
+      .map(res => res.wasAcknowledged())
 }

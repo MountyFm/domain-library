@@ -13,9 +13,11 @@ object MountyMessages {
 
     case object GetUserProfileByIdRequest extends BaseMessage
 
-    case object GetUserProfileRooms extends BaseMessage
+    case object GetUserProfileRoomsRequest extends BaseMessage
   }
   object MountyApi {
+    case object Error extends BaseMessage
+
     case object Pong extends BaseMessage
 
     case object CreateUserProfileResponse extends BaseMessage

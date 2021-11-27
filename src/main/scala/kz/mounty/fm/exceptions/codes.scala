@@ -13,6 +13,10 @@ object ErrorSeries {
   case object AUTH_API extends ErrorSeries {
     override val series = 1
   }
+
+  case object USER_PROFILE_CORE extends ErrorSeries {
+    override val series = 2
+  }
 }
 
 object ErrorCodes {
