@@ -38,5 +38,8 @@ libraryDependencies ++= Seq(
   "com.rabbitmq" % "amqp-client" % "5.14.0",
 
   //akka
-  "com.typesafe.akka" %% "akka-actor" % "2.6.17"
+  "com.typesafe.akka" %% "akka-actor" % "2.6.17",
+
+  "org.mongodb.scala" %% "mongo-scala-driver" % "4.4.0",
+
 )
