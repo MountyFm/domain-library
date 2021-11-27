@@ -3,7 +3,7 @@ package kz.mounty.fm.serializers
 import kz.mounty.fm.domain.user.RoomUserType
 import org.joda.time.DateTime
 import org.joda.time.format.ISODateTimeFormat
-import org.json4s.{CustomKeySerializer, CustomSerializer, DefaultFormats, Formats, JString}
+import org.json4s.{ CustomSerializer, DefaultFormats, Formats, JString}
 
 trait Serializers {
   implicit val formats: Formats = DefaultFormats ++ Seq(
