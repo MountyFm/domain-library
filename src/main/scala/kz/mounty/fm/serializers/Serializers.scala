@@ -2,7 +2,7 @@ package kz.mounty.fm.serializers
 
 import kz.mounty.fm.domain.DomainEntity
 import kz.mounty.fm.domain.spotify.gateway.{Album, Artist, Image, SpotifyPlaylist, SpotifyPlaylistItem, SpotifyTrack, SpotifyTracks}
-import kz.mounty.fm.domain.spotify.gateway.requests.{ChangePlayerStateRequest, ChangePlayerStateResponse, GetCurrentUserPlaylistsRequestBody, GetCurrentUserPlaylistsResponseBody, GetPlayListTracksResponseBody, GetPlaylistTracksRequestBody}
+import kz.mounty.fm.domain.spotify.gateway.requests.{ChangePlayerStateRequest, ChangePlayerStateRequestBody, ChangePlayerStateResponse, ChangePlayerStateResponseBody, GetCurrentUserPlaylistsRequestBody, GetCurrentUserPlaylistsResponseBody, GetPlayListTracksResponseBody, GetPlaylistTracksRequestBody}
 import org.joda.time.DateTime
 import org.joda.time.format.ISODateTimeFormat
 import org.json4s.jackson.Serialization
@@ -28,8 +28,8 @@ trait Serializers {
         classOf[GetPlaylistTracksRequestBody],
         classOf[GetPlayListTracksResponseBody],
         classOf[SpotifyPlaylistItem],
-        classOf[ChangePlayerStateRequest],
-        classOf[ChangePlayerStateResponse]
+        classOf[ChangePlayerStateRequestBody],
+        classOf[ChangePlayerStateResponseBody]
       )
     )
   ) + new DateTimeSerializer
