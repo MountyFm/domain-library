@@ -3,6 +3,7 @@ package kz.mounty.fm.serializers
 import kz.mounty.fm.domain.DomainEntity
 import kz.mounty.fm.domain.commands._
 import kz.mounty.fm.domain.requests._
+import kz.mounty.fm.exceptions.ExceptionInfo
 import org.joda.time.DateTime
 import org.joda.time.format.ISODateTimeFormat
 import org.json4s.jackson.Serialization
@@ -26,6 +27,7 @@ trait Serializers {
         classOf[PlayerNextGatewayResponseBody],
         classOf[PlayerPrevGatewayCommandBody],
         classOf[PlayerPrevGatewayResponseBody],
+        classOf[ExceptionInfo],
       )
     )
   ) + new DateTimeSerializer
