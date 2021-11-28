@@ -52,7 +52,7 @@ object MountyMessages {
 
     case object PlaySong extends BaseMessage
 
-    case object GetUserPlaylistResponse extends BaseMessage
+    case object GetCurrentUserRoomsResponse extends BaseMessage
 
     case object GetPlaylistTracksResponse extends BaseMessage
 
@@ -68,7 +68,7 @@ object MountyMessages {
   }
 
   object SpotifyGateway {
-    case object GetUserPlaylistRequest extends BaseMessage
+    case object GetCurrentUserRoomsRequest extends BaseMessage
 
     case object GetUserProfileGatewayRequest extends BaseMessage
 

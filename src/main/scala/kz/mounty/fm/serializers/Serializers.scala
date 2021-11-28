@@ -16,7 +16,7 @@ trait Serializers {
     ShortTypeHints(
       List(
         classOf[DomainEntity],
-        classOf[GetCurrentUserPlaylistsRequestBody],
+        classOf[GetCurrentUserRoomsRequestBody],
         classOf[GetPlaylistTracksRequestBody],
         classOf[GetUserProfileGatewayRequestBody],
         classOf[GetUserProfileGatewayResponseBody],
@@ -31,7 +31,7 @@ trait Serializers {
         classOf[PlayerPrevGatewayResponseBody],
         classOf[ExceptionInfo],
         classOf[Playlist],
-        classOf[GetCurrentUserPlaylistsResponseBody],
+        classOf[GetCurrentUserRoomsResponseBody],
         classOf[Track],
         classOf[GetPlaylistTracksResponseBody],
       )
@@ -39,13 +39,11 @@ trait Serializers {
   ) + new DateTimeSerializer
 
 
-  class DateTimeSerializer extends CustomSerializer[DateTime] (_ => (
-    {
-      case JString(s) => ISODateTimeFormat.dateTime().parseDateTime(s)
-    },
-    {
-      case d: DateTime => JString(ISODateTimeFormat.dateTime().print(d))
-    }
+  class DateTimeSerializer extends CustomSerializer[DateTime](_ => ( {
+    case JString(s) => ISODateTimeFormat.dateTime().parseDateTime(s)
+  }, {
+    case d: DateTime => JString(ISODateTimeFormat.dateTime().print(d))
+  }
   ))
 
 }
