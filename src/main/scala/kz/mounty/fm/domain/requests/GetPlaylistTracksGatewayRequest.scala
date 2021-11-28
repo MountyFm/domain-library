@@ -8,4 +8,4 @@ case class GetPlaylistTracksGatewayRequestBody(playlistId: String,
                                                offset: Option[Int],
                                                tokenKey: String) extends DomainEntity
 
-case class GetPlaylistTracksGatewayResponseBody(tracks: Seq[Track]) extends DomainEntity
+case class GetPlaylistTracksGatewayResponseBody(roomId: String, tracks: Seq[Track]) extends DomainEntity
