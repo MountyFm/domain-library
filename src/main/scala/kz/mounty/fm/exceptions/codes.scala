@@ -10,7 +10,7 @@ trait ErrorSeries {
 }
 
 object ErrorSeries {
-  case object AUTH_API extends ErrorSeries {
+  case object SPOTIFY_AUTH_ADAPTER extends ErrorSeries {
     override val series = 1
   }
   case object SPOTIFY_GATEWAY extends ErrorSeries {

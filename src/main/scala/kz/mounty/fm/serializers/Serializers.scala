@@ -32,7 +32,8 @@ trait Serializers {
         classOf[ExceptionInfo],
         classOf[Playlist],
         classOf[GetCurrentUserPlaylistsResponseBody],
-        classOf[Track]
+        classOf[Track],
+        classOf[GetPlaylistTracksResponseBody],
       )
     )
   ) + new DateTimeSerializer
