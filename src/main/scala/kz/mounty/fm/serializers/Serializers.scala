@@ -34,6 +34,8 @@ trait Serializers {
         classOf[GetCurrentUserRoomsGatewayResponseBody],
         classOf[Track],
         classOf[GetPlaylistTracksGatewayResponseBody],
+        classOf[GetCurrentUserRoomsRequestBody],
+        classOf[GetCurrentUserRoomsResponseBody],
       )
     )
   ) + new DateTimeSerializer
