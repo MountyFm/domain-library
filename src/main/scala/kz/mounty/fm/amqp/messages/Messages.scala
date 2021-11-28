@@ -15,6 +15,7 @@ object MountyMessages {
 
     case object GetUserProfileRoomsRequest extends BaseMessage
   }
+
   object MountyApi {
     case object Error extends BaseMessage
 
@@ -48,6 +49,20 @@ object MountyMessages {
     case object PauseSong extends BaseMessage
 
     case object PlaySong extends BaseMessage
+  }
+
+  object SpotifyGateway {
+    case object GetUserPlaylistRequest extends BaseMessage
+
+    case object PlayerPlayGatewayCommand extends BaseMessage
+
+    case object PlayerPauseGatewayCommand extends BaseMessage
+
+    case object PlayerPlayNextGatewayCommand extends BaseMessage
+
+    case object PlayerPlayPrevGatewayCommand extends BaseMessage
+
+    case object PlayerGetCurrentlyPlayingTrackCommand extends BaseMessage
   }
 }
 

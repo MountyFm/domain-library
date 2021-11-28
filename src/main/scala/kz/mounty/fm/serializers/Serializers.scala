@@ -1,8 +1,8 @@
 package kz.mounty.fm.serializers
 
 import kz.mounty.fm.domain.DomainEntity
-import kz.mounty.fm.domain.commands.{ChangePlayerStateRequestBody, ChangePlayerStateResponseBody}
-import kz.mounty.fm.domain.requests.{GetCurrentUserPlaylistsRequestBody, GetPlaylistTracksRequestBody, GetUserProfileGatewayRequestBody, GetUserProfileGatewayResponseBody}
+import kz.mounty.fm.domain.commands._
+import kz.mounty.fm.domain.requests._
 import org.joda.time.DateTime
 import org.joda.time.format.ISODateTimeFormat
 import org.json4s.jackson.Serialization
@@ -15,10 +15,17 @@ trait Serializers {
         classOf[DomainEntity],
         classOf[GetCurrentUserPlaylistsRequestBody],
         classOf[GetPlaylistTracksRequestBody],
-        classOf[ChangePlayerStateRequestBody],
-        classOf[ChangePlayerStateResponseBody],
         classOf[GetUserProfileGatewayRequestBody],
-        classOf[GetUserProfileGatewayResponseBody]
+        classOf[GetUserProfileGatewayResponseBody],
+        classOf[PlayerGetCurrentlyPlayingTrackGatewayCommandBody],
+        classOf[PlayerGetCurrentlyPlayingTrackGatewayResponseBody],
+        classOf[PlayerPauseGatewayCommandBody],
+        classOf[PlayerPauseGatewayResponseBody],
+        classOf[PlayerPlayGatewayCommandBody],
+        classOf[PlayerPlayNextCommandBody],
+        classOf[PlayerPlayNextResponseBody],
+        classOf[PlayerPlayPrevCommandBody],
+        classOf[PlayerPlayPrevResponseBody],
       )
     )
   ) + new DateTimeSerializer
