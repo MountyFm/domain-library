@@ -19,6 +19,10 @@ object ErrorSeries {
   case object USER_PROFILE_CORE extends ErrorSeries {
     override val series = 3
   }
+
+  case object ROOM_CORE extends ErrorSeries {
+    override val series = 4
+  }
 }
 
 object ErrorCodes {

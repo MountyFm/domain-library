@@ -19,7 +19,8 @@ object RoomUserType extends CustomEnumeration[RoomUserType] {
     ADMIN,
     DJ,
     ORDINARY,
-    BANNED
+    BANNED,
+    NOT_ACTIVE
   )
 
   case object CREATOR extends RoomUserType
@@ -31,5 +32,7 @@ object RoomUserType extends CustomEnumeration[RoomUserType] {
   case object ORDINARY extends RoomUserType
 
   case object BANNED extends RoomUserType
+
+  case object NOT_ACTIVE extends RoomUserType
 
 }
