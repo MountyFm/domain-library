@@ -17,15 +17,15 @@ trait Serializers {
         classOf[GetPlaylistTracksRequestBody],
         classOf[GetUserProfileGatewayRequestBody],
         classOf[GetUserProfileGatewayResponseBody],
-        classOf[PlayerGetCurrentlyPlayingTrackGatewayCommandBody],
-        classOf[PlayerGetCurrentlyPlayingTrackGatewayResponseBody],
+        classOf[GetCurrentlyPlayingTrackRequestBody],
+        classOf[GetCurrentlyPlayingTrackResponseBody],
         classOf[PlayerPauseGatewayCommandBody],
         classOf[PlayerPauseGatewayResponseBody],
         classOf[PlayerPlayGatewayCommandBody],
-        classOf[PlayerPlayNextCommandBody],
-        classOf[PlayerPlayNextResponseBody],
-        classOf[PlayerPlayPrevCommandBody],
-        classOf[PlayerPlayPrevResponseBody],
+        classOf[PlayerNextCommandBody],
+        classOf[PlayerNextResponseBody],
+        classOf[PlayerPrevCommandBody],
+        classOf[PlayerPrevResponseBody],
       )
     )
   ) + new DateTimeSerializer

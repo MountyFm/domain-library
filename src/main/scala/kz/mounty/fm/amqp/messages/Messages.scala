@@ -58,11 +58,11 @@ object MountyMessages {
 
     case object PlayerPauseGatewayCommand extends BaseMessage
 
-    case object PlayerPlayNextGatewayCommand extends BaseMessage
+    case object PlayerNextGatewayCommand extends BaseMessage
 
-    case object PlayerPlayPrevGatewayCommand extends BaseMessage
+    case object PlayerPrevGatewayCommand extends BaseMessage
 
-    case object PlayerGetCurrentlyPlayingTrackCommand extends BaseMessage
+    case object GetCurrentlyPlayingTrackRequest extends BaseMessage
   }
 }
 
