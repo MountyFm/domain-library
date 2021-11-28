@@ -9,10 +9,9 @@ import scala.util.Try
 
 object AmqpPublisher {
   def publish(amqpMessage: AMQPMessage,
-              channel: Channel,
-              exchange: String)(implicit formats: Formats): Try[Unit]= {
+              channel: Channel)(implicit formats: Formats): Try[Unit]= {
    Try( channel.basicPublish(
-      exchange,
+      amqpMessage.exchange,
       amqpMessage.routingKey,
       MessageProperties.TEXT_PLAIN,
       write(amqpMessage).getBytes

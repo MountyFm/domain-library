@@ -14,6 +14,9 @@ object MountyMessages {
     case object GetUserProfileByIdRequest extends BaseMessage
 
     case object GetUserProfileRoomsRequest extends BaseMessage
+
+    case object GetUserProfileGatewayResponse extends BaseMessage
+
   }
 
   object MountyApi {
@@ -75,6 +78,8 @@ object MountyMessages {
     case object GetCurrentlyPlayingTrackRequest extends BaseMessage
 
     case object GetCurrentlyPlayingTrackResponse extends BaseMessage
+
+    case object GetUserProfileGatewayRequest extends BaseMessage
   }
 }
 

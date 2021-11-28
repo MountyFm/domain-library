@@ -13,6 +13,12 @@ trait BaseRepository {
       .first()
       .headOption()
 
+  def findAllByFilter[T: Manifest](filter: Bson)(implicit collection: MongoCollection[T]): Future[Seq[T]] =
+    collection
+      .find(filter)
+      .collect()
+      .head()
+
   def create[T: Manifest](entity: T)(implicit collection: MongoCollection[T], ex: ExecutionContext): Future[T] =
     collection
       .insertOne(entity)
