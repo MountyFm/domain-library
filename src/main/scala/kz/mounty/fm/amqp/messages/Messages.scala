@@ -33,6 +33,14 @@ object MountyMessages {
 
     case object GetUserProfileRoomsResponse extends BaseMessage
 
+    case object PlayNextTrackResponse extends BaseMessage
+
+    case object PlayPrevTrackResponse extends BaseMessage
+
+    case object PauseSongResponse extends BaseMessage
+
+    case object PlaySongResponse extends BaseMessage
+
   }
 
   object RoomCore {
