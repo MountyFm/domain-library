@@ -1,10 +1,10 @@
 package kz.mounty.fm.domain.requests
 
 import kz.mounty.fm.domain.DomainEntity
-import kz.mounty.fm.domain.playlist.Playlist
+import kz.mounty.fm.domain.room.Room
 
-case class GetCurrentUserPlaylistsRequestBody(limit: Option[Int],
-                                              offset: Option[Int],
-                                              tokenKey: String) extends DomainEntity
+case class GetCurrentUserRoomsRequestBody(limit: Option[Int],
+                                          offset: Option[Int],
+                                          tokenKey: String) extends DomainEntity
 
-case class GetCurrentUserPlaylistsResponseBody(playlists: Seq[Playlist] = Seq.empty) extends DomainEntity
+case class GetCurrentUserRoomsResponseBody(rooms: Seq[Room] = Seq.empty) extends DomainEntity
