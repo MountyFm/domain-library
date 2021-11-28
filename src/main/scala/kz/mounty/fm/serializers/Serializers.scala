@@ -22,10 +22,10 @@ trait Serializers {
         classOf[PlayerPauseGatewayCommandBody],
         classOf[PlayerPauseGatewayResponseBody],
         classOf[PlayerPlayGatewayCommandBody],
-        classOf[PlayerNextCommandBody],
-        classOf[PlayerNextResponseBody],
-        classOf[PlayerPrevCommandBody],
-        classOf[PlayerPrevResponseBody],
+        classOf[PlayerNextGatewayCommandBody],
+        classOf[PlayerNextGatewayResponseBody],
+        classOf[PlayerPrevGatewayCommandBody],
+        classOf[PlayerPrevGatewayResponseBody],
       )
     )
   ) + new DateTimeSerializer
