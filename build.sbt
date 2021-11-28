@@ -4,7 +4,7 @@ name := "mounty-domain"
 
 isSnapshot := true
 
-version := "0.1.2" + (if (isSnapshot.value) "-SNAPSHOT" else "")
+version := "0.1.1" + (if (isSnapshot.value) "-SNAPSHOT" else "")
 scalaVersion := "2.12.12"
 
 scalacOptions ++= Seq(
