@@ -2,6 +2,7 @@ package kz.mounty.fm.serializers
 
 import kz.mounty.fm.domain.DomainEntity
 import kz.mounty.fm.domain.commands._
+import kz.mounty.fm.domain.playlist.Playlist
 import kz.mounty.fm.domain.requests._
 import kz.mounty.fm.exceptions.ExceptionInfo
 import org.joda.time.DateTime
@@ -28,6 +29,8 @@ trait Serializers {
         classOf[PlayerPrevGatewayCommandBody],
         classOf[PlayerPrevGatewayResponseBody],
         classOf[ExceptionInfo],
+        classOf[Playlist],
+        classOf[GetCurrentUserPlaylistsResponseBody],
       )
     )
   ) + new DateTimeSerializer
