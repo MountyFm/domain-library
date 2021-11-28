@@ -16,12 +16,12 @@ trait Serializers {
     ShortTypeHints(
       List(
         classOf[DomainEntity],
-        classOf[GetCurrentUserRoomsRequestBody],
-        classOf[GetPlaylistTracksRequestBody],
+        classOf[GetCurrentUserRoomsGatewayRequestBody],
+        classOf[GetPlaylistTracksGatewayRequestBody],
         classOf[GetUserProfileGatewayRequestBody],
         classOf[GetUserProfileGatewayResponseBody],
-        classOf[GetCurrentlyPlayingTrackRequestBody],
-        classOf[GetCurrentlyPlayingTrackResponseBody],
+        classOf[GetCurrentlyPlayingTrackGatewayRequestBody],
+        classOf[GetCurrentlyPlayingTrackGatewayResponseBody],
         classOf[PlayerPauseGatewayCommandBody],
         classOf[PlayerPauseGatewayResponseBody],
         classOf[PlayerPlayGatewayCommandBody],
@@ -31,9 +31,9 @@ trait Serializers {
         classOf[PlayerPrevGatewayResponseBody],
         classOf[ExceptionInfo],
         classOf[Playlist],
-        classOf[GetCurrentUserRoomsResponseBody],
+        classOf[GetCurrentUserRoomsGatewayResponseBody],
         classOf[Track],
-        classOf[GetPlaylistTracksResponseBody],
+        classOf[GetPlaylistTracksGatewayResponseBody],
       )
     )
   ) + new DateTimeSerializer
