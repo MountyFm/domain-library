@@ -49,6 +49,8 @@ object MountyMessages {
 
     case object GetRoomByInviteCodeResponse extends  BaseMessage
 
+    case object UpdateRoomResponse extends BaseMessage
+
   }
 
   object RoomCore {
@@ -89,6 +91,8 @@ object MountyMessages {
     case object GetRoomsAndRoomTracksRequest extends BaseMessage
 
     case object GetRoomByInviteCodeRequest extends BaseMessage
+
+    case object UpdateRoomRequest extends BaseMessage
   }
 
   object SpotifyGateway {

@@ -37,7 +37,9 @@ trait Serializers {
         classOf[GetCurrentUserRoomsRequestBody],
         classOf[GetCurrentUserRoomsResponseBody],
         classOf[GetRoomByInviteCodeRequestBody],
-        classOf[GetRoomByInviteCodeResponseBody]
+        classOf[GetRoomByInviteCodeResponseBody],
+        classOf[UpdateRoomRequestBody],
+        classOf[UpdateRoomResponseBody],
       )
     )
   ) + new DateTimeSerializer
