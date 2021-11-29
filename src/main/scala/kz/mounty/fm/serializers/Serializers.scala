@@ -36,6 +36,8 @@ trait Serializers {
         classOf[GetPlaylistTracksGatewayResponseBody],
         classOf[GetCurrentUserRoomsRequestBody],
         classOf[GetCurrentUserRoomsResponseBody],
+        classOf[GetRoomByInviteCodeRequestBody],
+        classOf[GetRoomByInviteCodeResponseBody]
       )
     )
   ) + new DateTimeSerializer
