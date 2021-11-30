@@ -7,4 +7,4 @@ case class GetCurrentUserRoomsGatewayRequestBody(limit: Option[Int],
                                                  offset: Option[Int],
                                                  tokenKey: String) extends DomainEntity
 
-case class GetCurrentUserRoomsGatewayResponseBody(rooms: Seq[Room] = Seq.empty) extends DomainEntity
+case class GetCurrentUserRoomsGatewayResponseBody(userId: String, rooms: Seq[Room] = Seq.empty) extends DomainEntity

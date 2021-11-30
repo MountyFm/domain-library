@@ -6,6 +6,7 @@ import kz.mounty.fm.domain.playlist.Playlist
 import kz.mounty.fm.domain.requests._
 import kz.mounty.fm.domain.room.{Room, RoomStatus}
 import kz.mounty.fm.domain.track.Track
+import kz.mounty.fm.domain.user.RoomUserType
 import kz.mounty.fm.exceptions.ExceptionInfo
 import org.joda.time.DateTime
 import org.joda.time.format.ISODateTimeFormat
@@ -25,6 +26,13 @@ trait Serializers {
     case JString(s) => RoomStatus(s)
   }, {
     case s: RoomStatus => JString(s.toString())
+  }
+  ))
+
+  class RoomUserTypeSerializer extends CustomSerializer[RoomUserType](_ => ( {
+    case JString(s) => RoomUserType(s)
+  }, {
+    case s: RoomUserType => JString(s.toString())
   }
   ))
 
@@ -57,7 +65,19 @@ trait Serializers {
         classOf[UpdateRoomRequestBody],
         classOf[UpdateRoomResponseBody],
         classOf[Room],
+        classOf[PauseSongCommandBody],
+        classOf[PrevSongCommandBody],
+        classOf[NextSongCommandBody],
+        classOf[PlaySongCommandBody],
+        classOf[GetRoomUsersByRoomIdRequestBody],
+        classOf[GetRoomUsersByRoomIdResponseBody],
+        classOf[GetRoomUserByIdRequestBody],
+        classOf[GetRoomUserByIdResponseBody],
+        classOf[UpdateRoomUserRequestBody],
+        classOf[UpdateRoomUserResponseBody],
+        classOf[GetOrCreateRoomUserIfNotExistRequestBody],
+        classOf[GetOrCreateRoomUserIfNotExistResponseBody],
       )
     )
-  ) + new DateTimeSerializer + new RoomStatusSerializer()
+  ) + new DateTimeSerializer + new RoomStatusSerializer() + new RoomUserTypeSerializer()
 }
