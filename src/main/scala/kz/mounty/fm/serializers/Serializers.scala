@@ -75,8 +75,8 @@ trait Serializers {
         classOf[GetRoomUserByIdResponseBody],
         classOf[UpdateRoomUserRequestBody],
         classOf[UpdateRoomUserResponseBody],
-        classOf[GetOrCreateRoomUserIfNotExistRequestBody],
-        classOf[GetOrCreateRoomUserIfNotExistResponseBody],
+        classOf[CreateRoomUserIfNotExistRequestBody],
+        classOf[CreateRoomUserIfNotExistResponseBody],
       )
     )
   ) + new DateTimeSerializer + new RoomStatusSerializer() + new RoomUserTypeSerializer()
