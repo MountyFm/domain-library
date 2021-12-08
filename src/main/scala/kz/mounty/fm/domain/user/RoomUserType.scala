@@ -1,6 +1,7 @@
 package kz.mounty.fm.domain.user
 
 import kz.mounty.fm.domain.CustomEnumeration
+import kz.mounty.fm.domain.room.RoomStatus.NOT_ACTIVE
 
 sealed trait RoomUserType
 
