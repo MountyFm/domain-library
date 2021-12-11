@@ -29,4 +29,7 @@ object ErrorCodes {
   case class INTERNAL_SERVER_ERROR(override val series: ErrorSeries) extends ErrorCode {
     override val code = 1
   }
+  case class ACCESS_TOKEN_NOT_FOUND(override val series: ErrorSeries) extends ErrorCode {
+    override val code = 2
+  }
 }
