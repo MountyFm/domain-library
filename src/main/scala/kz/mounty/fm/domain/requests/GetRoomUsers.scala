@@ -1,8 +1,8 @@
 package kz.mounty.fm.domain.requests
 
 import kz.mounty.fm.domain.DomainEntity
-import kz.mounty.fm.domain.user.RoomUser
+import kz.mounty.fm.domain.user.{RoomUser, RoomUserType}
 
-case class GetRoomUsersByRoomIdRequestBody(roomId: String) extends DomainEntity
+case class GetRoomUsersRequestBody(roomId: String, `type`: Option[RoomUserType]) extends DomainEntity
 
-case class GetRoomUsersByRoomIdResponseBody(roomUsers: Seq[RoomUser] = Seq.empty)
+case class GetRoomUsersResponseBody(roomUsers: Seq[RoomUser] = Seq.empty)
