@@ -58,6 +58,8 @@ object MountyMessages {
     case object UpdateRoomUserResponse extends BaseMessage
 
     case object CreateRoomUserIfNotExistResponse extends BaseMessage
+
+    case object MakeRoomPrivateResponse extends BaseMessage
   }
 
   object RoomCore {
@@ -106,6 +108,8 @@ object MountyMessages {
     case object UpdateRoomUserRequest extends BaseMessage
 
     case object CreateRoomUserIfNotExistRequest extends BaseMessage
+
+    case object MakeRoomPrivateRequest extends BaseMessage
   }
 
   object SpotifyGateway {
@@ -124,7 +128,6 @@ object MountyMessages {
     case object PlayerPrevGatewayCommand extends BaseMessage
 
     case object GetCurrentlyPlayingTrackGatewayRequest extends BaseMessage
-
   }
 }
 
