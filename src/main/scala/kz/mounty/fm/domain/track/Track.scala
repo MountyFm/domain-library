@@ -7,4 +7,5 @@ case class Track(id: String,
                  spotifyUri: String,
                  artists: Seq[String],
                  name: String,
+                 progressMs: Option[Int] = None,
                  duration: Int) extends DomainEntity

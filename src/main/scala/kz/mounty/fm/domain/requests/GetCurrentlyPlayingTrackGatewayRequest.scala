@@ -5,4 +5,4 @@ import kz.mounty.fm.domain.track.Track
 
 case class GetCurrentlyPlayingTrackGatewayRequestBody(tokenKey: String) extends DomainEntity
 
-case class GetCurrentlyPlayingTrackGatewayResponseBody(track: Track, progressMs: Int) extends DomainEntity
+case class GetCurrentlyPlayingTrackGatewayResponseBody(track: Track) extends DomainEntity
